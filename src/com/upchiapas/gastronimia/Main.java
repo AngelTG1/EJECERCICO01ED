@@ -17,12 +17,12 @@ public class Main {
                         System.out.println("1: REGISTAR USUARIO");
                         System.out.println("2: VISUALIZAR  partisipantes");
                         System.out.println("3: salir");
+                        System.out.print("Selecciones una opcion: ");
                         Scanner entrada = new Scanner(System.in);
                         opcion = entrada.nextInt();
                         switch (opcion) {
                                 case 1:
                                         registrarParticioantes();
-
                                         break;
                                 case 2:
                                         visualizarParticipantes(cantidad);
@@ -45,6 +45,7 @@ public class Main {
         public static void registrarParticioantes(){
                 String nom;
                 String lugar;
+                int folio = 0;
 
                 System.out.println("Participantes: ");
                 Scanner entrada = new Scanner(System.in);
@@ -55,7 +56,9 @@ public class Main {
                         nom = entrada.next();
                         System.out.println("Lugar de origen: ");
                         lugar = entrada.next();
-                        objectoPaticipante = new Participante(nom, lugar);
+                        folio = (int) (Math.random() * 100);
+                        System.out.println("Folio: "+folio);
+                        objectoPaticipante = new Participante(nom, lugar, folio);
                         arregloA[i] = objectoPaticipante;
                 }
 
@@ -67,6 +70,8 @@ public static void visualizarParticipantes(int cantidad){
                         System.out.println("participante: "+(i+1));
                         System.out.println("Nombre: "+arregloA[i].getNombre());
                         System.out.println("Lugar de origen: "+arregloA[i].getLugar());
+                        System.out.println("Folio: "+arregloA[i].getFolio());
+
                 }
 }
 

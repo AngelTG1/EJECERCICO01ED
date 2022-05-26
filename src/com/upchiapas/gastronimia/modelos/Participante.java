@@ -32,7 +32,7 @@ public class Participante {
 
 
 
-    public Participante(String nombre, String lugar) {
+    public Participante(String nombre, String lugar, int folio) {
         this.nombre = nombre;
         this.folio = folio;
         this.lugar = lugar;
