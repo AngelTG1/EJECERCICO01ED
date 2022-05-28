@@ -1,9 +1,11 @@
 package com.upchiapas.gastronimia.modelos;
 
+
 public class Postre {
     private String nombre;
     private String ingredientes;
     private int folio;
+    private Postre[] listaPostres = new Postre[5];
 
     public String getNombre() {
         return nombre;

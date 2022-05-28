@@ -4,7 +4,7 @@ public class Participante {
     private String nombre;
     private int folio;
     private String lugar;
-    private Postre [] listaPostres = new Postre[5];
+
 
     public String getNombre() {
         return nombre;
@@ -46,6 +46,7 @@ public class Participante {
                 ", lugar='" + lugar + '\'' +
                 '}';
     }
+
 
 
 }
